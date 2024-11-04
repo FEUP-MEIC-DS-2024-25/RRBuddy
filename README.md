@@ -1,8 +1,8 @@
-# Projeto de DS
+# DS Project
 
-Projeto realizado no ambito da cadeira de Desenvolvimento de Software
+Project carried out within the scope of the Software Development course.
 
-Projeto de DS realizado por:
+DS Project completed by:
 
 - Carolina Gonçalves - up202108781
 - João Costa - up202108714
@@ -10,5 +10,4 @@ Projeto de DS realizado por:
 - Marco Costa - up202108821
 - Rafael Teixeira - up202108831
 
-## Nota : ?/20
-
+## Grade: ?/20
