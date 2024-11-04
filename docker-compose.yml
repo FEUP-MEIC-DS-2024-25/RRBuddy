@@ -1,0 +1,20 @@
+services:
+  frontend:
+    container_name: rrbuddy_frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    depends_on:
+      - backend
+
+  backend:
+    container_name: rrbuddy_backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/.env
+    ports:
+      - "5001:5001"

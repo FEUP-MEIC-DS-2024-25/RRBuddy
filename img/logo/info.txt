@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: GlacialIndifference-Bold
+font link: https://hanken.co/product/hk-grotesk/
+font author: Hanken Design Co.
+font author site: https://hanken.co/
+
+
+icon designer: Smashicons
+icon designer link: /smashicons
+        
+{"bg":"#EDE9E5","icon":"#0FAAAB","font":"#0FAAAB","slogan":"#23bebf"}
+      
