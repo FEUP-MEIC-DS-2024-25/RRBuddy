@@ -18,3 +18,40 @@ services:
       - ./backend/.env
     ports:
       - "5001:5001"
+    depends_on:
+      - postgres  
+
+  postgres:
+    container_name: rrbbudy_postgres
+    image: postgres
+    restart: always
+    hostname: localhost
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: database  
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./database/database.sql:/docker-entrypoint-initdb.d/database.sql
+      - ./database/populate.sql:/docker-entrypoint-initdb.d/populate.sql
+
+  pgadmin:
+    container_name: container-pgadmin
+    image: dpage/pgadmin4
+    depends_on:
+      - postgres
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    restart: always
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres-data:
