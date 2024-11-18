@@ -22,9 +22,8 @@ services:
       - postgres  
 
   postgres:
-    container_name: rrbbudy_postgres
+    container_name: rrbudy_postgres
     image: postgres
-    restart: always
     hostname: localhost
     ports:
       - "5433:5432"
@@ -36,6 +35,7 @@ services:
       - postgres-data:/var/lib/postgresql/data
       - ./database/database.sql:/docker-entrypoint-initdb.d/database.sql
       - ./database/populate.sql:/docker-entrypoint-initdb.d/populate.sql
+    restart: unless-stopped
 
   pgadmin:
     container_name: container-pgadmin
@@ -47,7 +47,9 @@ services:
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@admin.com
       PGADMIN_DEFAULT_PASSWORD: root
-    restart: always
+    volumes:
+      - ./pgadmin/servers.json:/pgadmin4/servers.json
+    restart: unless-stopped
 
 networks:
   app-network:
