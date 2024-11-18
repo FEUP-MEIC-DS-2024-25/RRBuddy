@@ -1,4 +1,7 @@
+import math
 import PyPDF2
+from fpdf import FPDF
+
 
 def process_files(files):
     result = []
@@ -23,3 +26,23 @@ def process_files(files):
 def create_response_txt(text, filepath):
     with open(filepath, 'w') as file:
         file.write(text)
+
+
+def create_response_pdf(text, filepath):
+    # Create a new FPDF object
+    pdf = FPDF()
+    pdf.set_auto_page_break(auto=True, margin=15)
+
+    # Add a new page to the PDF
+    pdf.add_page()
+
+    # Set the font and font size
+    pdf.set_font('Arial', size=12)
+
+    # Write the text to the PDF
+    pdf.write(5, text)
+
+    # Save the PDF
+    pdf.output(filepath)
+    
+
