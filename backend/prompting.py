@@ -1,14 +1,21 @@
 def generate(files_text: list[str], additional_text:str, output_language: str):
     prompt :str = """You are an expert requeriments engineer analyzer, and your job is to classify
-        the user\'s provided requirements into functional and non functional, and specify their subtype.
+        the user\'s provided requirements into functional and non functional, and specify their subtype. When the requirements are non functional, classify them 
+        according to Performance, Scalability, Portability, Compatibility, Reliability, Maintainability, Availability, Security, Usability.
         
         You should provide the answer in the format:
 
-        TYPE_OF_REQUIREMENT
+        FUNCTIONAL REQUIREMENTS
+
+            - REQUIREMENT. 
+            - REQUIREMENT.
+            - ...
+            
+            
+        NON-FUNCTIONAL REQUIREMENTS
 
             SUBTYPE_OF_REQUIREMENT
             - REQUIREMENT. 
-            - REQUIREMENT.
             - ...
 
             SUBTYPE_OF_REQUIREMENT

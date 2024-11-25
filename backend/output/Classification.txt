@@ -1,66 +1,49 @@
-FUNCTIONAL REQUIREMENTS
+REQUISITOS FUNCIONAIS
 
-    User Interface
-    - A user should be able to reset their password through an email verification process.
-    - A manager should be able to generate monthly sales reports in PDF format.
-    - A product search must return relevant results within 2 seconds of input.
-    - Users must have the ability to upload files up to 50MB in size.
-    - A customer should be able to track their order status in real-time.
-    - An administrator should be able to create, update, and delete user accounts.
-
-
-    Data Management
-    - Customer data must be stored for at least five years to comply with legal regulations.
-    - The system must maintain a log of all user activities for auditing purposes.
-
-    Reporting
-    - Reports must include visual charts to summarize data trends.
-
-    System Integration
-    - The platform must support integration with third-party payment gateways, such as PayPal and Stripe.
-
-    Notifications
-    - Notifications must be sent to users 24 hours before their subscription expires.
-    - Users should receive an alert if they attempt to delete an item permanently.
+Funcionalidade do Sistema
+- Um usuário deve ser capaz de redefinir sua senha por meio de um processo de verificação por email.
+- Um gerente deve ser capaz de gerar relatórios de vendas mensais em formato PDF.
+- Os clientes devem ser capazes de rastrear o status de seus pedidos em tempo real.
+- Um administrador deve ser capaz de criar, atualizar e excluir contas de usuários.
+- A plataforma deve oferecer suporte à integração com gateways de pagamento de terceiros, como PayPal e Stripe.
+- Uma pesquisa de produto deve retornar resultados relevantes em até 2 segundos após a entrada.
+- Os usuários devem ter a capacidade de enviar arquivos de até 50 MB de tamanho.
+- O sistema deve manter um log de todas as atividades do usuário para fins de auditoria.
 
 
-    Security
-    - The platform must support multi-factor authentication for login.
-    - The application must provide role-based access control for different user groups.
+Funcionalidade de Notificação
+- Notificações devem ser enviadas aos usuários 24 horas antes do vencimento de sua assinatura.
+- Os usuários devem receber um alerta se tentarem excluir um item permanentemente.
 
 
-NON-FUNCTIONAL REQUIREMENTS
+REQUISITOS NÃO FUNCIONAIS
 
-    Performance
-    - The system must support 10,000 concurrent users without performance degradation.
-    - The application must load the dashboard within 3 seconds under normal conditions.
-    - A product search must return relevant results within 2 seconds of input.
-    - The software must be operational for at least 99.9% of the time each month.
-    - The system should recover from power outages within 1 minute without losing data.
-
-
-    Security
-    - All data must be encrypted both in transit and at rest.
+Desempenho
+- O sistema deve suportar 10.000 usuários simultâneos sem degradação de desempenho.
+- O aplicativo deve carregar o painel em 3 segundos em condições normais.
+- Uma pesquisa de produto deve retornar resultados relevantes em até 2 segundos após a entrada.
+- O sistema deve se recuperar de quedas de energia em 1 minuto sem perder dados.
+- O software deve estar operacional por pelo menos 99,9% do tempo a cada mês.
 
 
-    Scalability
-    - The software must be deployable on both cloud-based and on-premise environments.
+Segurança
+- Todos os dados devem ser criptografados tanto em trânsito quanto em repouso.
+- A plataforma deve suportar autenticação multifator para login.
 
 
-    Usability
-    - The user interface must support English, Spanish, and French languages.
-    - The web portal must adhere to the WCAG 2.1 AA accessibility standards.
+Usabilidade
+- A interface do usuário deve suportar os idiomas inglês, espanhol e francês.
+- O portal da web deve atender aos padrões de acessibilidade WCAG 2.1 AA.
 
 
-    Compliance
-    - Customer data must be stored for at least five years to comply with legal regulations.
+Compatibilidade
+- O aplicativo móvel deve ser compatível com iOS 14 e posterior.
+- O software deve ser implantável em ambientes baseados em nuvem e locais.
 
 
-    Maintainability
-    - Developers must use Python 3.10 or later for back-end services.
-
-
-    Supportability
-    - The system should provide a 24/7 online helpdesk feature for users.
-
+Conformidade e Manutenção
+- Os dados do cliente devem ser armazenados por pelo menos cinco anos para cumprir as regulamentações legais.
+- O sistema deve fornecer um recurso de helpdesk online 24 horas por dia, 7 dias por semana para os usuários.
+- Relatórios devem incluir gráficos visuais para resumir as tendências de dados.
+- Desenvolvedores devem usar Python 3.10 ou posterior para serviços de back-end.
 
