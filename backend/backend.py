@@ -20,7 +20,8 @@ logging.basicConfig(level=logging.INFO)
 curr_dir = Path(__file__).parent.absolute()
 out_dir = Path(f"{curr_dir}/output")
 out_dir.mkdir(parents=True, exist_ok=True)
-pathfile = Path(f"{out_dir}/Classification")
+pathfile_txt = Path(f"{out_dir}/Classification.txt")
+pathfile_pdf = Path(f"{out_dir}/Classification.pdf")
 
 @app.route('/api/process', methods=['POST'])
 def process():
@@ -36,14 +37,13 @@ def process():
         prompt = prompting.generate(files_text, additional_info, output_language)
 
         response = model.generate_content(prompt)
-        if output_type == "pdf":
-            pathfile.suffix = ".pdf"
-            files.create_response_pdf(response.candidates[0].content.parts[0].text, pathfile)
-            return send_file(pathfile,as_attachment=True)
+
+        if output_type == 'pdf':
+            files.create_response_pdf(response.candidates[0].content.parts[0].text, pathfile_pdf)
+            return send_file(pathfile_pdf,as_attachment=True)
         else: 
-            pathfile.suffix = ".txt"
-            files.create_response_txt(response.candidates[0].content.parts[0].text, pathfile)
-            return send_file(pathfile,as_attachment=True)
+            files.create_response_txt(response.candidates[0].content.parts[0].text, pathfile_txt)
+            return send_file(pathfile_txt,as_attachment=True)
 
     except Exception as e:
         print(f"Error processing request: {e}")

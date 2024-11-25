@@ -37,7 +37,7 @@ def create_response_pdf(text, filepath):
     pdf.add_page()
 
     # Set the font and font size
-    pdf.set_font('Arial', size=12)
+    pdf.set_font('Arial', size=11)
 
     # Write the text to the PDF
     pdf.write(5, text)
