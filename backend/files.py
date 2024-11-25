@@ -2,11 +2,11 @@ import math
 import PyPDF2
 from fpdf import FPDF
 
+from parse import parse_input
 
 def process_files(files):
     result = []
     
-
     for file in files:
         print(f"Received file: {file.filename}")
         if file.filename.endswith('.pdf'):
@@ -19,7 +19,11 @@ def process_files(files):
             except Exception as e:
                 print(f"Error reading PDF file {file.filename}: {e}")
         else:
-            print(f"{file.filename} is not a PDF, cannot process.")
+            text = file.read().decode('utf-8')
+            text = parse_input(text)
+            result.append(text)
+            #response = model.generate_content(text)
+            print(f"Contents of {file.filename}:\n{text}")  
     
     return result
 

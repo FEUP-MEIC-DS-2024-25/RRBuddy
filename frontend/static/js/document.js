@@ -103,6 +103,7 @@ function normalizeText(file) {
 document.getElementById("upload_files_info").addEventListener("submit", async function (event) {
     event.preventDefault();
     const formData = new FormData(event.target);
+    const outputType = document.getElementById("outputType").value;
     
     try {
         document.getElementById('loading').classList.remove('hidden');
@@ -119,7 +120,7 @@ document.getElementById("upload_files_info").addEventListener("submit", async fu
         const contentDisposition = response.headers.get('content-disposition');
         const filename = contentDisposition
             ? contentDisposition.split('filename=')[1].split(';')[0].replace(/"/g, '')
-            : 'Classification.txt';
+            : 'Classification.' + outputType;
 
         const blob = await response.blob();
 

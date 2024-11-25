@@ -1,145 +1,66 @@
-## Classificação dos requisitos:
+FUNCTIONAL REQUIREMENTS
 
-**REQUISITOS FUNCIONAIS**
+    User Interface
+    - A user should be able to reset their password through an email verification process.
+    - A manager should be able to generate monthly sales reports in PDF format.
+    - A product search must return relevant results within 2 seconds of input.
+    - Users must have the ability to upload files up to 50MB in size.
+    - A customer should be able to track their order status in real-time.
+    - An administrator should be able to create, update, and delete user accounts.
 
-    **Funcionalidade Básica**
-    - US001 - Visualizar as principais notícias.
-    - US002 - Visualizar itens de notícias.
-    - US003 - Pesquisar por correspondência exata.
-    - US004 - Pesquisar por texto completo.
-    - US005 - Visualizar notícias recentes.
-    - US006 - Visualizar comentários de itens de notícias.
-    - US007 - Pesquisar por itens de notícias.
-    - US008 - Pesquisar por comentários.
-    - US009 - Pesquisar por vários atributos.
-    - US010 - Aplicar filtros de pesquisa.
-    - US011 - Ter placeholders em campos de formulário.
-    - US012 - Mensagens de erro contextuais.
-    - US013 - Dicas de ajuda contextuais.
-    - US014 - Seção "Sobre nós".
-    - US015 - Seção de recursos principais.
-    - US016 - Informações de contato.
-    - US017 - Ordenar resultados de pesquisa.
-    - US018 - Notícias relacionadas.
-    - US019 - Notícias do mesmo autor.
-    - US020 - Visualizar página de tag.
-    - US021 - Pesquisar por tags.
-    - US022 - Pesquisar por usuários.
-    - US023 - Ordenar comentários.
-    - US024 - Tags em alta.
-    - US101 - Efetuar login.
-    - US102 - Registrar.
-    - US103 - Recuperar senha.
-    - US201 - Efetuar logout.
-    - US202 - Visualizar detalhes do item de notícias.
-    - US203 - Feed de notícias do membro.
-    - US204 - Visualizar perfis de outros membros.
-    - US205 - Visualizar perfil.
-    - US206 - Editar perfil.
-    - US207 - Criar itens de notícias.
-    - US208 - Comentar itens de notícias.
-    - US209 - Visualizar detalhes do comentário.
-    - US210 - Votar em itens de notícias.
-    - US211 - Votar em comentários.
-    - US212 - Visualizar a reputação de outros membros.
-    - US213 - Visualizar tags de itens de notícias.
-    - US214 - Seguir/Deixar de seguir membros.
-    - US215 - Seguir/Deixar de seguir tags.
-    - US216 - Notificações de upvote.
-    - US217 - Notificações de comentário.
-    - US218 - Excluir conta.
-    - US219 - Foto de perfil.
-    - US220 - Visualizar notificações pessoais.
-    - US221 - Propor novos tópicos.
-    - US222 - Adicionar/Remover itens de notícias dos favoritos.
-    - US223 - Reportar membros ou conteúdo.
-    - US224 - Apelar para desbloqueio.
-    - US225 - Níveis com base na reputação.
-    - US226 - Responder a comentários de artigos.
-    - US227 - Aba de comentários no perfil dos membros.
-    - US228 - Seção "Seguindo".
-    - US301 - Editar itens de notícias.
-    - US302 - Excluir itens de notícias.
-    - US303 - Destacar pessoa/filme.
-    - US401 - Editar comentários.
-    - US402 - Excluir comentários.
-    - US501 - Administrar contas de membros.
-    - US502 - Gerenciar propostas de tópicos.
-    - US503 - Privilégios de conta de administrador.
-    - US504 - Bloquear/Desbloquear contas de membros.
-    - US505 - Excluir contas de membros.
-    - US506 - Gerenciar relatórios de conteúdo e membros.
-    - US507 - Estatísticas do painel de administração.
-    - US508 - Gerenciar tópicos.
-    - US509 - Histórico de edição.
-    - US510 - Gerenciar tags.
 
-    **Funcionalidade de Segurança**
-    - BR001 - Anonimização de dados.
-    - BR002 - Exclusão de conteúdo criado.
-    - BR003 - Artigo de notícias editado.
-    - BR004 - Comentário editado.
-    - BR005 - Artigo de notícias excluído.
-    - BR006 - Comentário excluído.
-    - BR007 - Tag banida.
-    - BR008 - Notificação de alterações de conteúdo.
-    - BR009 - Remoção de tópicos.
-    - BR010 - Atribuição de tópicos "Indefinido".
-    - BR011 - Sistema de votação.
-    - BR012 - Votos para conteúdo próprio.
-    - BR013 - Pontuação da Academia de Notícias.
-    - BR014 - Pontuação da Academia de Comentários.
-    - BR015 - Pontuação da Academia de Membros.
-    - BR016 - Tags de artigos de notícias.
-    - BR017 - Tópicos de artigos de notícias.
-    - BR018 - Autor do artigo de notícias.
-    - BR019 - Restrições de interação e apelo do usuário bloqueado.
-    - BR020 - Histórico de conteúdo excluído.
-    - BR021 - Acesso administrativo.
-    - BR022 - Gerenciamento de membros.
-    - BR023 - Controle de tópicos.
-    - BR024 - Controle de tags.
-    - BR025 - Autoridade de bloqueio/desbloqueio.
-    - BR026 - Exclusão de conta.
-    - BR027 - Gerenciamento de relatórios.
-    - BR028 - Insights do painel.
-    - BR029 - Personalização de feed.
-    - BR030 - Conteúdo em alta.
-    - BR031 - Feeds específicos de tag.
-    - BR032 - Atividade do usuário seguido.
-    - BR033 - Reportar conteúdo do feed.
-    - BR034 - Consistência do feed.
-    - BR035 - Validação de data do comentário.
-    - BR036 - Validação de data da resposta.
-    - BR037 - Validação de data da notificação.
+    Data Management
+    - Customer data must be stored for at least five years to comply with legal regulations.
+    - The system must maintain a log of all user activities for auditing purposes.
 
-**REQUISITOS NÃO FUNCIONAIS**
+    Reporting
+    - Reports must include visual charts to summarize data trends.
 
-    **Desempenho**
-    - TR01 - Desempenho.
+    System Integration
+    - The platform must support integration with third-party payment gateways, such as PayPal and Stripe.
 
-    **Segurança**
-    - TR02 - Segurança.
+    Notifications
+    - Notifications must be sent to users 24 hours before their subscription expires.
+    - Users should receive an alert if they attempt to delete an item permanently.
 
-    **Usabilidade**
-    - TR03 - Usabilidade.
 
-    **Disponibilidade**
-    - TR04 - Disponibilidade.
+    Security
+    - The platform must support multi-factor authentication for login.
+    - The application must provide role-based access control for different user groups.
 
-    **Acessibilidade**
-    - TR05 - Acessibilidade.
 
-    **Tecnologia**
-    - TR06 - Aplicação web.
-    - TR07 - Portabilidade.
-    - TR08 - Banco de dados.
+NON-FUNCTIONAL REQUIREMENTS
 
-    **Robustez**
-    - TR09 - Robustez.
+    Performance
+    - The system must support 10,000 concurrent users without performance degradation.
+    - The application must load the dashboard within 3 seconds under normal conditions.
+    - A product search must return relevant results within 2 seconds of input.
+    - The software must be operational for at least 99.9% of the time each month.
+    - The system should recover from power outages within 1 minute without losing data.
 
-    **Escalabilidade**
-    - TR10 - Escalabilidade.
 
-    **Ética**
-    - TR11 - Ética. 
+    Security
+    - All data must be encrypted both in transit and at rest.
+
+
+    Scalability
+    - The software must be deployable on both cloud-based and on-premise environments.
+
+
+    Usability
+    - The user interface must support English, Spanish, and French languages.
+    - The web portal must adhere to the WCAG 2.1 AA accessibility standards.
+
+
+    Compliance
+    - Customer data must be stored for at least five years to comply with legal regulations.
+
+
+    Maintainability
+    - Developers must use Python 3.10 or later for back-end services.
+
+
+    Supportability
+    - The system should provide a 24/7 online helpdesk feature for users.
+
+

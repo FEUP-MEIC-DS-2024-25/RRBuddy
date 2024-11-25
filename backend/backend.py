@@ -8,6 +8,7 @@ import files
 import prompting
 from pathlib import Path
 
+
 load_dotenv()
 
 genai.configure(api_key=os.environ["API_KEY"])
